@@ -1,0 +1,152 @@
+import React from "react";
+import ReactDOM from "react-dom/client";
+
+
+
+// what parcel do ???????
+// * create server
+// * HMR - Hot module replacement
+// * file watcher algo - written in c++
+// *  bundling 
+// * minify
+// * cleaning our code ( remove console.log())
+// * super fast build algo
+// * image optimization
+// * dev and prodution build 
+// * cache while dev
+// * compression
+// * compatible with older version of browser
+// * give functionality to bulid in https npx parcel build index.html --https
+// * manage port number
+// * consistent hashing algo
+// * tree shaking -> remove unwanted
+// * transitive dependencies -> 
+
+
+
+
+// const tag = React.createElement("h1" ,
+//     null , "Namaste Everyone");
+//     const add = ReactDOM.createRoot(document.getElementById("root"));
+//     add.render(tag);
+
+
+    // created h1 with text in it
+//     const heading = React.createElement("h1",        // function create an object of h1
+//     {
+//         id:"heading",
+//         key: "h1",           // must be unique it avoid rerender read doc
+//     } , 
+//     "heading 1 from parcel");
+
+    //React.createElement  => object => html(dom)
+    // create h2 with text in it
+//     const heading2 = React.createElement("h1",
+//     {
+//         id:"heading2",
+//         key:"h2",
+//     } , 
+//     "heading 2");
+
+    // create div with array of tags  in it
+//     const container = React.createElement("div" , 
+//     {
+//         id : "container",
+//     } , [heading , heading2]);
+
+    
+//     add.render(container);
+
+// //* to create multiple child the code will be messy so we use jsx
+
+
+//     const head1 = React.createElement("h1" , {
+//         id :"title",
+//         key:"h1",
+//     } , "heading for multiple child" )
+    
+//     const divinsert = React.createElement("div" ,null , [
+//         React.createElement("h1" , {
+//             id :"title",
+//             key:"h1",
+//         } , "heading for multiple child" ),
+//         React.createElement("h1" , {
+//             id :"title",
+//             key:"h1",
+//         } , "heading for multiple child" ),
+//         React.createElement("h1" , {
+//             id :"title",
+//             key:"h1",
+//         } , "heading for multiple child" ),
+//         React.createElement("h1" , {
+//             id :"title",
+//             key:"h1",
+//         } , "heading for multiple child" ),
+//         React.createElement("h1" , {
+//             id :"title",
+//             key:"h1",
+//         } , "heading for multiple child" ),
+//         React.createElement("h1" , {
+//             id :"title",
+//             key:"h1",
+//         } , "heading for multiple child" ),
+//     ])
+
+//     add.render(divinsert);
+
+    //jsx ???/
+    //jsx => React.createElement  => object => html(dom)
+
+//     const heading3  = <h1>thia ia </h1>;
+//     const heading4 = (
+//         <h1 id = "name">
+//             Namaste
+//             </h1>         // this is not html it is html like syntax
+                             //broweser understand this tag ***babel** unserstands it and convert to createelement check at babel.io
+//     )
+     //jsx - > enhance readability 
+     //    -> ease of developer
+
+
+//react components:--
+        //functional -> NEw
+        // class based components -> OLD
+
+//functional componenets ->
+
+        const container = React.createElement("h1" , {
+                id :"title",
+                key:"h1",
+            } , "this is create element inserted in functional compoenet" )
+
+        const HeaderComponenet = () =>
+        {
+            return (
+            <div>
+                <h1>this is functional component inserted in functional component</h1>
+            </div>
+            )
+        }
+
+        // const data = api.getdata(); // if this api is hacked and return malusious code  and insert in component then jsx sanatise it
+        // above and this is same 
+        const HeaderComponenet2 = () =>(
+            <div>
+                {/* this is ############ component composition############# */}
+                {/* {data} */}
+                {container}          
+                <HeaderComponenet/>          
+                {HeaderComponenet()}     
+                {1+2 } 
+                {/* inside {} it render as javascript               */}
+                <h1>this is a functional component </h1>
+            </div>
+            )
+
+            
+            const add = ReactDOM.createRoot(document.getElementById("root"));
+            add.render(container);
+
+            // for component 
+            add.render(<HeaderComponenet2/>);
+

@@ -1,0 +1,17 @@
+is jsx mandatory ?? NOT
+is ES6 mandatory ?? NOT
+
+their must be only one parent inside jsx
+    invalid -> const jsx = <h1> this is first</h1><h1>this is second </h1>
+    valid -> const jsx = <div><h1> this is first</h1><h1>this is second </h1><div/>
+
+    but if we donot want to add this tag then react provide use with react.Fragment
+    const jsx = <React.Fragment><h1> this is first</h1><h1>this is second </h1><React.Fragment/>
+    or
+    const jsx = <> <h1> this is first</h1><h1>this is second </h1> </>
+
+inline styling in react
+config driven ui
+optional chaining         - >    restaurant.data?.name;     here if data is resent then it will try to acess name
+props -> properties
+map , filter , reduce video saini
