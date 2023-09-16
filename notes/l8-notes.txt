@@ -1,0 +1,29 @@
+
+
+loadspage ---> api call --> render page 
+
+2] loadspage --- > render something  ->> APi call  - -->  render page  or upadate ui
+   
+-->to go for 2 nd process we use useEffect() hook
+-->useEffect call the call back function after every render if we dont want to call it after every rerender we pass empty dependency array 
+---> if we want to rerender for changes in some useState variable we pass in that dependency array
+
+===> empty dependency array ==> once after render
+====> dependency array [searchTxt]  =? once after intial render + everytime after rerender (my searchTxt changes)
+
+
+===> browser blocking (cros) from fetching data from swiggy ===> add extension cors extension 
+
+
+===> CONDITIONAL RENDERING
+     ->if restaurant is empty ->shimmer ui
+     -> if restaurant -> data  
+
+
+
+
+
+
+
+watch cors by akshay saini 
+use shimmer ui

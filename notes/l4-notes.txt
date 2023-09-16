@@ -150,3 +150,24 @@ import ReactDOM from "react-dom/client";
             // for component 
             add.render(<HeaderComponenet2/>);
 
+
+
+<div className="restaurant-list">
+        {/* <Restaurantcard
+          cloudinaryImageId={restaurantList[0].data.cloudinaryImageId}
+          name={restaurantList[0].data.name}
+          cuisines={restaurantList[0].data.cuisines}
+          lastMileTravelString={restaurantList[0].data.lastMileTravelString}
+        />
+        this is written as spread operator see below */}
+        {/* map is best way to do functional programming */}
+  
+        {/* <Restaurantcard {...restaurantList[0].data} />
+        <Restaurantcard {...restaurantList[1].data} /> */}
+  
+  
+        {/* no key(not acceptable) <<<<<<<<<<<<<<<<<< index as key(last option) <<<<unique key(best practice)  */}
+        {restaurantList.map((restaurant) => {
+          return <Restaurantcard {...restaurant.data} key={restaurant.data.id}/>;
+        })}
+      </div>

@@ -1,0 +1,61 @@
+finding the path    
+    
+imp notes  ---> 
+        don,t create functional component inside applayout 
+        don`t write useState inside if-else  condition  or for loop ---> it make it inconsistent
+        use useState in functional component not outside 
+
+        images are generally store in cdn 
+
+
+what's the difference between () => {} and () => () ?   
+            () => {}       ----> block of statement executed and then return explicitly
+            () => ()       ----> single expression is created and implicit return
+
+            read more may be not correct 
+
+
+routing --->
+    -> install npm i react-router-dom
+    -> explore other router
+    -> import {createBrowserRouter} from
+    
+
+dynamic routing ---->
+
+    const { param } = useParams();
+    console.log("parma " + param );
+
+    {
+        path:"/:id",
+        element:<RestaurantDetails/>
+      }
+
+      here if name of path must be same as const { id } = useParams
+
+     ** OR***
+    
+     const { param } = useParams();
+    console.log("parma " + param );
+
+    {
+        path:"/restaurant/:id",
+        element:<RestaurantDetails/>
+    }
+
+   here it reaturn object which contain object 
+   
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    hw
+    -> explore other router
+    -> use formik and make login page make hardcode

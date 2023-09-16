@@ -1,0 +1,138 @@
+let s get classy 
+
+nested routing : -- 
+    
+
+react started with class based component functional component are recent no useState and useEffect 
+
+**-high chance of asked in interview 
+
+class based component
+    -> render() method mandatory , can`t create class based component without render method 
+    -> example 
+                        
+            class ProfileInfo extends React.Component
+            {
+                render()
+                {
+                    return <h1>this is a class based component</h1>
+                }
+            }
+            export default ProfileInfo;
+
+functional componenet has useState class based has constructor react monitors class to rerender 
+
+super must nessacry in constructor in react class based componenet
+
+ constructor(props)
+    {
+        super(props);
+        console.log(this.props.name + " child -- constructor");
+        this.state = 
+        {
+            count : 0,
+        };
+    }
+
+    count variable is intialixed 
+    to use we use -- this.state.count 
+    to update state ----  this.setState({
+                                count : count + 1,
+                            })
+
+
+react componenet life cycle 
+
+
+
+
+
+
+hw 
+    - super , constructor
+    - why do we so super(props)
+            constructor(props)
+            {
+                super(props);
+            }
+    - why can we make componentMount() async but not callback function in useEffect( ()=>{})
+        wrong useEffect(async ()=> {getrestaturantdata});
+        correct
+            async getrestaturantdata(){}
+            useEffect(()=> {getrestaturantdata});
+
+
+timeline
+    1. nested routing
+    2. class based component
+    3. render() method  -> write return in render
+    4. passing props to class based component -- using this.props.name
+    5. state variable in react     --- constructor{super() this.state={count : 0, }}  -- creating state 
+                                         <button onClick={ ()=>
+                                            {
+                                                this.setState({
+                                                    count : count + 1,
+                                                })
+                                            }}>click</button>             ---- updating state 
+
+    6. class life cycle   --- first constructor then render then componentDidMount hence we call api in componentDidMount
+    7. componentDidMount() method       -- api call
+                first constructor is called
+                then first render is called
+                and them componentDidMount is called this is where we do api call 
+                their are many life cycle method like componentDidMount()  -- read about them 
+
+    8. life cycle for parent child ---
+                Parent -- consturctor
+                Parent -- Render
+                child -- constructor
+                child -- render
+                child -- Mount
+                Parent -- componenet mount
+
+    https://www.google.com/url?sa=i&url=https%3A%2F%2Fprojects.wojtekmaj.pl%2Freact-lifecycle-methods-diagram%2F&psig=AOvVaw2_NXUDBW46qZq2RoNekzS7&ust=1694931829866000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCJjN3Z-_roEDFQAAAAAdAAAAABAE
+
+        some time child mount print after parent mount --- if child mount contain the api call it takes time to fetch hence parent mount 
+    9. life cycle for parent and multiple child ---
+            Parent -- consturctor
+            Parent -- Render
+                first child -- constructor
+                first child -- render
+                second child -- constructor
+                second child -- render
+                first child -- Mount 
+                second child -- Mount
+            Parent -- componenet mount
+
+
+    componentDidMount -- after first render
+    componenetdidUpdate  -- after next render 
+    componenetdidUpdate
+    componenetWillUnmount      --called  when we are leaving the page (but it is single page)  --> case of ** const this.timer = setinterval() **  clear this interval using --- clearInterval(this.timer)  in componenetWillUnmount
+    if we do not clear it will runing all time and multiple set can called 
+
+
+            useEffect(()=>{
+                setinterval(()=>{
+
+                } , 1000 ) ;
+                //this func is used to unmount in function componenet
+                return ()=>{ }
+            } , []);
+    10 . mounting updating unmounting 
+
+                child constructor
+                child render
+                child mount 
+
+                api call
+                set state   ---------- then go to update 
+                <UPDATE cycle >
+
+                render
+
+    11. dont compare functional with classed 
+        useEffect must not compare with componentDidMount
+
+
+why async componentDidMount(()=>{}) but not  async useEffect((=>))

@@ -1,0 +1,22 @@
+default import  -> export default Body
+import Body from "./components/body";
+
+named import   -> export const fun_= () => {}; 
+import { Footer } from "./components/footer";
+
+import * as XYZ from "./components/header";
+also ->
+import {Title , Header } from "./components/header";
+<>XYZ.Header</>;
+<>XYZ.Title</>;
+
+
+what is state 
+what is hooks
+what is usestate
+
+
+usestate -- > 
+   to create state variables 
+   local state variable 
+   
