@@ -106,7 +106,7 @@ timeline
 
 
     componentDidMount -- after first render
-    componenetdidUpdate  -- after next render 
+    componenetdidUpdate  -- after very time something updates
     componenetdidUpdate
     componenetWillUnmount      --called  when we are leaving the page (but it is single page)  --> case of ** const this.timer = setinterval() **  clear this interval using --- clearInterval(this.timer)  in componenetWillUnmount
     if we do not clear it will runing all time and multiple set can called 

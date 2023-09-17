@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Body from "./components/Body";
@@ -9,10 +9,12 @@ import RestaurantDetails from "./components/RestaurantDetails";
 import Error from "./components/Error";
 import ProfileInfo from "./components/Profileclass";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
-
+import {lazy } from "react";
+import ShimmerHome from "./components/Shimmer";
+const Instamart = lazy( ()=> import("./components/Instamart"))
 const root = ReactDOM.createRoot(document.getElementById("root"));
-
-/*
+// import Instamart from "./components/Instamart";
+/*src\components\Shimmer.js
 header  
     - logo
     - home 
@@ -64,6 +66,15 @@ const AppRouter = createBrowserRouter([
       {
         path: "More",
         element: <></>,
+      }
+      ,
+      {
+        path: "Instamart",
+        element: (
+          <Suspense fallback={<ShimmerHome/>}>
+            <Instamart/>
+          </Suspense>)
+        ,
       },
       {
         path: "restaurant/:id",
