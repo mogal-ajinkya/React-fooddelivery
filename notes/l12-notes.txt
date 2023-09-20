@@ -4,8 +4,29 @@
     what is scss and sass 
 
     ways to write css 
-    
+
     csss file 
     scss
     inline 
-    libraries       -- - ant ui and material ui 
+    libraries       -- - ant ui and material ui , base ui
+    style components
+    tailwind css frameworks
+3. tailwind -- open source css framework
+        css on the go in same file 
+        reusability  prebuilt class can be used 
+        less bundle size minimal css offer
+        flexible ui -- very much customiizable
+        best documatation😂😁
+
+    postcss -- tranforming css with js
+
+4. pros and cons of tailwind ---- > 
+        easy to deubug 
+        easy to used
+        no duplicate
+        bundle size is small 
+        less time as no switching in tabs 
+
+        cons =---> initial learning curve 
+                    
+
