@@ -63,7 +63,7 @@ const Body = () => {
         <button
           className="search-btn"
           onClick={() => {
-            updated = filterData(searchTxt, allrestData);
+            updated = filterData(searchTxt, restaurantData);
             setrestaurantData(updated);
           }}
         >
@@ -82,7 +82,7 @@ const Body = () => {
                 to={"/restaurant/" + restaurant.info.id}
                 key={restaurant.info.id}
               >
-                <Restaurantcard {...restaurant.info.data} />
+                <Restaurantcard {...restaurant.info} />
               </Link>
             );
           })
