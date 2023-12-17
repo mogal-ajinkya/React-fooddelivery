@@ -63,7 +63,7 @@ const Body = () => {
         <button
           className="search-btn"
           onClick={() => {
-            updated = filterData(searchTxt, restaurantData);
+            const updated = filterData(searchTxt, restaurantData);
             setrestaurantData(updated);
           }}
         >
