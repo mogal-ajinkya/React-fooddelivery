@@ -2,10 +2,14 @@
   "name": "namaste-react",
   "version": "1.0.0",
   "description": "this is react course",
+  
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html",
-    "test": "jest"
+    "prebuild-dev": "shx rm -rf dist/*",
+    "build-dev": "parcel build index.html --no-optimize --public-url ./",
+    "prebuild": "shx rm -rf dist/*",
+    "build": "parcel build index.html --public-url ./",
+    "push-gh-pages": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose"
   },
   "author": "Ajinkya Mogal",
   "license": "ISC",
