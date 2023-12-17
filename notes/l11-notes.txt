@@ -1,0 +1,41 @@
+
+
+timeline 
+1.building our own hook 
+            why need of hook -- reusability 
+                                readibility
+                                maintanable 
+                                testable 
+                                seperate the concurences 
+
+
+
+2. useRestaurant
+3. useOnline
+4. fake offline --- cleaning cache -- 
+                    clear event listeners when change page 
+                    how to remove 
+5 . hook for -acess to local storage 
+            - 
+
+6. we can not have one bundle of our code as it might get heavy to load 
+        we chunk it , code spllitting
+        dynamic bundling , lazy loading
+        on demand loading 
+        dynamic import 
+
+        while importing --- const Instamart = lazy( ()=> import("./components/Instamart"))
+
+        as it take time to fetch the require bundle it throw error as react try to render but bundle not received yet so 
+        we use  <Suspense><Suspense/>
+        {
+        path: "Instamart",
+        element: (
+          <Suspense>
+            <Instamart/>
+          </Suspense>)
+        ,
+      }
+
+      we can also add fallback ={ }
+              can add shimmer 

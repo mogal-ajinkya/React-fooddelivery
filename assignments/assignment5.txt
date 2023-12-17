@@ -1,0 +1,56 @@
+Is JSX mandatory for React?
+    no, JSX is not mandatory it only make development easier we can do jsx worl by using react.
+    i.e react.createElement() => object => html
+    jsx itself use in behind create element of react.
+
+    react doc -> JSX is not a requirement for using React. Using React without JSX is especially convenient when you don’t want to set up compilation in your build environment.Each JSX element is just syntactic sugar for calling React.createElement(component, props, ...children). So, anything you can do with JSX can also be done with just plain JavaScript.
+    JSX is converted to JavaScript by using babel compiler
+
+Is ES6 mandatory for React?
+
+{TitleComponent} vs {<TitleComponent/>} vs {<TitleComponent></TitleComponent>} in JSX
+    {TitleComponent}  -> inside {} we can write js here TitleComponent is variable in js may be const or var .
+    {<TitleComponent/>}-> it is basically a function which create and return html tags and insert into html also written as {TitleComponent()} 
+    {<TitleComponent></TitleComponent>} - > similar to  {<TitleComponent/>} {TitleComponent()} 
+
+How can I write comments in JSX?
+    {/*
+     this jsx comment 
+    */}
+    
+What is <React.Fragment></React.Fragment> and <></> ?
+    in jsx we can not make multiple parents in jsx functions but if want to do that we simply put everything us react fragment i.e <React.Fragment></React.Fragment> is similar to <></>
+    lets you group elements without a wrapper node.
+
+What is Virtual DOM?
+    it is representation of dom created by react for reconcilation -> reconcilation is process in which react re-render on;y the component that is changed to re -render react use diff algorithm . for reconcilation the tag must be unique or developer must provide unique key if tags are not unique it helps react to only render the added tag not re - render (no unnecessary reload -> optimization) whole.
+
+    key must be not be index (you can use index but bad practce)
+
+What is Reconciliation in React?
+    The algorithm React uses to diff one tree with another to determine which parts need to be changed.
+    reconcilation -> reconcilation is process in which react re-render on;y the component that is changed to re -render react use diff algorithm . for reconcilation the tag must be unique or developer must provide unique key if tags are not unique it helps react to only render the added tag not re - render (no unnecessary reload -> optimization) whole.
+    The key only has to be unique among its siblings, not globally unique.
+
+What is React Fiber?
+    Fiber is the new reconciliation engine in React 16.
+
+Why we need keys in React? When do we need keys in React?
+    it is used to uniquely identify the tags in react element. this help in reconcilation in which react indentifies the changes in tree and render that part only.
+
+Can we use index as keys in React?
+    yes , we can but it is not a good practice.
+
+What is props in React? Ways to
+    props simply stands for  properties and it is passed as parameter to the functional componenets . 
+    they make the components re-usable.
+    they pass data from one component to another.  
+    We use props in both functional and class-based components.
+    We pass props from the top to bottom. We can also refer to it as ancestor to descendant, or parent to child.
+    Props are read-only. 
+
+What is a Config Driven UI ?
+    A "config-driven UI" is a user interface that is built and configured using a declarative configuration file or data structure, rather than being hardcoded. The configuration file or data structure typically contains information about the structure of the UI, such as the layout of the elements, the properties and behaviors of each element, and any data sources or APIs that the UI interacts with.
+    Using a config-driven UI approach, the UI can be easily modified and customized without requiring changes to the underlying codebase. This makes it easier to maintain, extend, and scale the UI, and also allows for more rapid development and iteration.
+
+    react , json form , Angular Schematics , formik supports building config driven ui 

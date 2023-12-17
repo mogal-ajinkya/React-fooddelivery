@@ -1,0 +1,23 @@
+handling data is most crucial part 
+ui layer -- the thing are visible 
+data layer --- 
+
+comibne make frontend application -- single page application
+jsx -- convert to 
+    how convert babel 
+
+
+objects by react -- it is the virtual dom -- reconciallation --
+
+prop drilling ---- have data in parent and want to acess by childeren to child passing
+
+what if you want to pass from child to parent
+
+acordins -- basic acordins
+        -- colapsable acordins
+
+lifting the state up 
+
+
+
+//todo continue further

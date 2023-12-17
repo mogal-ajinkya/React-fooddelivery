@@ -1,0 +1,39 @@
+What is Emmet?
+    emmet is a set of plugins for text editor that allows in high speed coding and editing in html , xml .
+
+Difference between a Library and Framework?
+
+What is CDN? Why do we use it?
+    cdn-> content delivery network
+    To minimize the distance between the visitors and your website’s server, a CDN stores a cached version of its content in multiple geographical locations (a.k.a., points of presence, or PoPs). Each PoP contains a number of caching servers responsible for content delivery to visitors within its proximity.
+    benefits of cdn ->
+        1.Improving website load time
+        2.Reducing bandwidth costs
+        3.Increase content availability
+        4.Improve website security
+
+Why is React known as React?
+    because it is Reacts. It developed by facebook and facebook a site that constantly updata information to improve the user interface development and more effectively change (REACT to) what the user sees when they’re doing things like mouse clicking, submitting and typing.
+    Instead of having a complete website re-render every time something changes, React can update only the things that are different than they were before an event happened. 
+
+What is crossorigin in script tag?
+    cross origin provide support for CROS.
+    CORS stands for Cross-Origin Resource Sharing.
+     a mechanism that allows resources on a web page to be requested from another domain outside their own domain.
+
+What is diference between React and ReactDOM
+    The react package holds the react source for components, state, props and all the code that is react.
+    The react-dom package as the name implies is the glue between React and the DOM. Often, you will only use it for one single thing: mounting your application to the index.html file with ReactDOM.render().
+
+    The reason React and ReactDOM were split into two libraries was due to the arrival of React Native (A react platform for mobile development).
+    The react-dom package as the name implies is the glue between React and the DOM. Often, you will only use it for one single thing: mounting your application to the index.html file with ReactDOM.render().
+
+
+What is difference between react.development.js and react.production.js files via CDN?
+what is async and differ?
+    in normal ->
+        html parsing going on and if script encounter then the parsing stop and script fetch from the network and executed and parsing begin
+    in async -> 
+        if script encounter parsing and fetching goes in parrallel and parsing stop for execution of script and after execution parsing begin. doesnt grant of execution order.
+    in differ -> 
+        if script encounter parsing and fetching goes in parrallel and after parsing finish then execution of script is done.

@@ -1,0 +1,24 @@
+what is npm ?
+    it is a package manager for js programming. entirely written in javascript.
+
+What is `Parcel/Webpack`? Why do we need it?
+    parcel / Webpack are bundlers of js project .
+    it provide various fetures like ->> 
+                                    1.clean code 
+                                    2.watch on files
+                                    3. bundling
+                                    4. minify
+                                    5. create server
+                                    6. hmr ( hot reload replacement)
+                                    7. make compatible with old browser version
+                                    8. create cache
+                                    9. image optimization
+                                    10 . compression
+    it is a package that provides librearies to develop project.
+
+what .parcel-cache?
+    it store information about project . it is create by parcel every time when we build project or if we delete it.
+    so when you rebuild project then parcel do not need to re analyze and reparse everything from scratch.we do not need to add it to git.
+
+
+what is npx?
