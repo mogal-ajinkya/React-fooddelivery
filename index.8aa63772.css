@@ -1,0 +1,187 @@
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+#container {
+  background-color: red;
+}
+
+.header {
+  border: 2px solid #000;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header > ul {
+  justify-content: space-evenly;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header > ul > li {
+  margin: 1rem;
+  list-style: none;
+}
+
+.header > a {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header > a > img {
+  width: 100px;
+}
+
+.card > img {
+  width: 100%;
+  height: 50%;
+}
+
+.card {
+  border: 2px solid #000;
+  width: 250px;
+  height: 400px;
+  margin: 1rem;
+  padding: .5rem;
+}
+
+.restaurant-list {
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.shimmer-card {
+  border: 2px solid #000;
+  width: 250px;
+  height: 400px;
+  margin: 1rem;
+  padding: .5rem;
+}
+
+.name, .cusine, .more-data {
+  background-color: gray;
+  border: .5px solid #000;
+  height: 7%;
+}
+
+.image {
+  background-color: gray;
+  border: .5px solid #000;
+  width: 100%;
+  height: 50%;
+  margin: 0%;
+}
+
+.card-details {
+  border: 2px solid #000;
+  width: 50%;
+  margin: 1rem auto;
+  padding: 1rem;
+  font-family: sans-serif;
+  font-size: medium;
+}
+
+.card-details > h4 {
+  line-height: .2;
+}
+
+.restaurant-menu {
+  border: 2px solid #000;
+  width: 50%;
+  margin: auto;
+  padding: 1rem;
+}
+
+.menu-contents {
+  border: 2px solid #000;
+  margin: .5rem;
+  padding: .5rem;
+  font-size: smaller;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menu-info {
+  width: 100%;
+}
+
+.menu-img > img {
+  width: 9rem;
+  height: 100%;
+}
+
+.shimmer-card-details {
+  border: 2px solid #000;
+  width: 50%;
+  margin: 1rem auto;
+  padding: 1rem;
+  font-family: sans-serif;
+  font-size: medium;
+}
+
+.shimmer-card-details > h4 {
+  background-color: gray;
+  border: 2px solid #000;
+  height: 1.5rem;
+}
+
+.shimmer-card-details > h2 {
+  background-color: gray;
+  border: 2px solid #000;
+  height: 2.5rem;
+}
+
+.shimmer-restaurant-menu {
+  border: 2px solid #000;
+  width: 50%;
+  margin: auto;
+  padding: 1rem;
+}
+
+.shimmer-menu-contents {
+  border: 1px solid #000;
+  margin: .5rem;
+  padding: .5rem;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.shimmer-menu-info {
+  width: 100%;
+}
+
+.shimmer-menu-info > h4 {
+  background-color: gray;
+  border: 1px solid #000;
+  height: 2.5rem;
+  margin-right: 1rem;
+}
+
+.shimmer-menu-info > p {
+  background-color: gray;
+  border: 1px solid #000;
+  height: 1.5rem;
+  margin-right: 1rem;
+}
+
+.shimmer-menu-img > img {
+  background-color: gray;
+  border: 1px solid #000;
+  width: 9rem;
+  height: 100%;
+}
+
+.shimmer-restaurant-menu > h1, .shimmer-restaurant-menu > h2 {
+  background-color: gray;
+  border: 1px solid #000;
+  height: 3rem;
+}
+
+/*# sourceMappingURL=index.8aa63772.css.map */
