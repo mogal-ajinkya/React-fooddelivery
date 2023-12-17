@@ -40,12 +40,12 @@ const Applayout = () => {
 
 const AppRouter = createBrowserRouter([
   {
-    path: "/",
+    path: "",
     element: <Applayout />,
     errorElement: <Error />,
     children: [
       {
-        path: "/",
+        path: "",
         element: <Body />,
         
       },
